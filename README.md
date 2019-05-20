@@ -1,5 +1,7 @@
 把src.py挂到服务器用 nohup 挂到后台一直跑就行
 
+新注册的微信号不能登录web微信所以用不了wxpy模块
+
 二维码在nohup.out里面，直接用shell的文件编辑器打开可能乱码，可以下载到本地用Sublime Text打开
 也可以更改console_qr的值
 
