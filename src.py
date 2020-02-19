@@ -60,6 +60,16 @@ def get_news():
     note = r.json()['note']
     return onewords, note
 
+# 计算天数 
+def get_days(): 
+    #time1是开始的时间 
+    time1 = "2018-08-10" 
+    time2 = datetime.datetime.now().strftime('%Y-%m-%d') 
+    day1 = time.strptime(str(time1), '%Y-%m-%d') 
+    day2 = time.strptime(str(time2), '%Y-%m-%d') 
+    days = (int(time.mktime(day2)) - int(time.mktime(day1))) / (24 * 60 * 60) 
+    return abs(int(days))
+
 def run():
     response = get_html(hangzhou)
     info = get_weather(response)
